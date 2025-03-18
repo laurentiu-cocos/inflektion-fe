@@ -1,0 +1,50 @@
+<div class="left-menu" [class.open]="leftMenuOpen">
+  <div class="left-menu-header">
+    <div class="logo">
+      <img src="assets/images/inflektion-logo.svg" alt="Inflektion Logo" />
+    </div>
+  </div>
+  <div class="left-menu-nav">
+    <ul class="nav flex-column list-unstyled">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/dashboard"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <div class="icon-container">
+            <img src="assets/images/dashboard-icon.png" alt="Dashboard Icon" />
+          </div>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/partners"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <div class="icon-container">
+            <img src="assets/images/partner-icon.png" alt="Partners Icon" />
+          </div>
+          <span>Partners</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          routerLink="/approvals"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <div class="icon-container">
+            <img src="assets/images/approval-icon.png" alt="Approvals Icon" />
+          </div>
+          <span>Approvals</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

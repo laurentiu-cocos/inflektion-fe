@@ -1,0 +1,97 @@
+.btn-spacer {
+  margin-right: 25px;
+}
+
+.date-dropdown {
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 10px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  position: relative;
+  font-family: Arial, sans-serif;
+  color: #0a1130;
+  display: inline-block;
+
+  .calendar-icon {
+    font-size: 20px;
+    padding-right: 15px;
+  }
+
+  .date-range {
+    flex: 1;
+    padding-right: 15px;
+  }
+
+  .dropdown-arrow {
+    font-size: 14px;
+    color: #0a1130;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    width: 100%;
+
+    input {
+      width: 100%;
+      margin: 5px 0;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+  }
+
+  &.active .dropdown-content {
+    display: block;
+  }
+}
+
+.gradient-btn {
+  background: linear-gradient(135deg, #5e33ce, #1e0b50);
+  border: none;
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  outline: none;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+}
+
+.dropdown-arrow-title {
+  padding-top: 4px;
+}
+
+.top-tile {
+  font-weight: 600;
+  font-size: 16px;
+  color: #9097b9;
+  padding-left: 16px;
+}

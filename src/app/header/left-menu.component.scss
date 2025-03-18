@@ -1,0 +1,128 @@
+// Import Bootstrap functions and variables
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import '../../assets/scss/variables';
+
+// Left menu variables
+$left-menu-width: 235px;
+$left-menu-bg: #ffffff;
+$left-menu-text: #adb5bd;
+$left-menu-text-active: #ffffff;
+$left-menu-pill: #ff13b8; // Pink left highlight
+$icon-color: #6b7280;
+$icon-size: 1rem;
+
+@media (min-width: 1024px) {
+  .left-menu {
+    display: none;
+  }
+}
+
+.left-menu {
+  width: $left-menu-width;
+  background-color: $left-menu-bg;
+  height: 100vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  transition: all 0.3s;
+  z-index: 1000;
+  padding-top: 1rem;
+  display: none;
+
+  &.open {
+    display: block;
+  }
+
+  .left-menu-header {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      display: flex;
+      margin-bottom: 30px;
+      color: $brand-color;
+    }
+  }
+
+  // Navigation styling
+  .left-menu-nav {
+    .nav-item {
+      .nav-link {
+        display: flex;
+        align-items: center;
+        padding: 15.5px 20px;
+        color: $left-menu-text;
+        font-size: 16px;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        text-decoration: none;
+
+        .icon-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 24px;
+          height: 24px;
+          margin-right: 0.75rem;
+        }
+
+        i {
+          font-size: $icon-size;
+          margin-right: 0.75rem;
+          color: $icon-color;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          bottom: 0;
+          width: 6px;
+          background-color: transparent;
+          transition: background-color 0.3s;
+        }
+
+        &.active {
+          background-color: $brand-color;
+          color: $left-menu-text-active;
+
+          i {
+            color: $left-menu-text-active;
+          }
+
+          &::before {
+            background-color: $left-menu-pill; // Pink left border when active
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive styles for smaller screens
+@include media-breakpoint-down(md) {
+  .left-menu {
+    width: 70px;
+
+    .logo-text,
+    .nav-link span {
+      display: none;
+    }
+
+    .nav-link {
+      justify-content: center;
+      padding: 0.5rem;
+
+      i {
+        margin-right: 0;
+      }
+    }
+  }
+}
